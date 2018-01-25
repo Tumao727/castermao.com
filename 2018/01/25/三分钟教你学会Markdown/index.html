@@ -6,17 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Forever Learner | Junior Programmer | Amateur Translator">
+    <meta name="description" content="为什么选择markdown？这个问题随手百度或知乎就可得到一大堆相关解答，也就不再赘述。下面讲讲最常用的几个markdown语法： 标题对熟悉HTML的人来讲，各级标题的使用必然不陌生。即使不熟悉也没关系，这就和写作时分小标题来使文章更有条理是一个道理。操作很简单，在标题前加 # 即可。分别对应HTML中的到，越往下字越小，重要性越次之：123456# 老大## 老二### 老三#### 老四##">
+<meta name="keywords" content="markdown">
 <meta property="og:type" content="article">
 <meta property="og:title" content="三分钟教你学会Markdown">
 <meta property="og:url" content="http://castermao.com/2018/01/25/三分钟教你学会Markdown/index.html">
 <meta property="og:site_name" content="FE炼金术研究所">
-<meta property="og:description" content="Forever Learner | Junior Programmer | Amateur Translator">
+<meta property="og:description" content="为什么选择markdown？这个问题随手百度或知乎就可得到一大堆相关解答，也就不再赘述。下面讲讲最常用的几个markdown语法： 标题对熟悉HTML的人来讲，各级标题的使用必然不陌生。即使不熟悉也没关系，这就和写作时分小标题来使文章更有条理是一个道理。操作很简单，在标题前加 # 即可。分别对应HTML中的到，越往下字越小，重要性越次之：123456# 老大## 老二### 老三#### 老四##">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-25T07:10:16.378Z">
+<meta property="og:image" content="https://i.imgflip.com/19dwu7.jpg">
+<meta property="og:updated_time" content="2018-01-25T11:00:37.134Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="三分钟教你学会Markdown">
-<meta name="twitter:description" content="Forever Learner | Junior Programmer | Amateur Translator">
+<meta name="twitter:description" content="为什么选择markdown？这个问题随手百度或知乎就可得到一大堆相关解答，也就不再赘述。下面讲讲最常用的几个markdown语法： 标题对熟悉HTML的人来讲，各级标题的使用必然不陌生。即使不熟悉也没关系，这就和写作时分小标题来使文章更有条理是一个道理。操作很简单，在标题前加 # 即可。分别对应HTML中的到，越往下字越小，重要性越次之：123456# 老大## 老二### 老三#### 老四##">
+<meta name="twitter:image" content="https://i.imgflip.com/19dwu7.jpg">
     
     
         
@@ -94,7 +97,81 @@
 
     </div>
     <div id="toc">
-      
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#标题"><span class="toc-number">1.</span> <span class="toc-text">标题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number"></span> <span class="toc-text">到，越往下字越小，重要性越次之：123456# 老大## 老二### 老三#### 老四##### 老五###### 老六
+效果如下：
+老大老二老三老四老五老六列表既然提到要使文章更加有逻辑，列表自然不可少。列表又分有序与无序两种，分别对应HTML中的, 顾名思义，有序列表前带数字编号，而无序列表前大多是小圆点。操作如下：无序（以下的*号也可替换成+或-）：123* cats* dogs* rabbits
+效果如下：
+
+cats
+dogs
+rabbits
+
+有序：1231. 土豆2. 番茄3. 茄子
+效果如下：
+
+土豆
+番茄
+茄子
+
+引用对应HTML中的操作如下：1234> 红红火火恍恍惚惚> 嘻嘻哈哈呵呵> 银铃般的笑声
+也可以简单点写成：1234> 红红火火恍恍惚惚嘻嘻哈哈呵呵> 银铃般的笑声
+效果如下：
+
+红红火火恍恍惚惚嘻嘻哈哈呵呵
+银铃般的笑声
+
+代码引用如果需要引用代码，只需用3个`号将代码上下包起来即可：如需要相关代码高亮，只需在第一行3个`号后面加上你所用的语言名称，如JavaScript（注：在不影响）
+效果如下：123var add = function(a, b) {  return a + b}
+插入链接我们用人见人爱的百度来举例：[]里填写想显示出的文字，()里填链接操作如下：1[百度](https://www.baidu.com/)
+效果如下：百度
+插入图片学会了插入链接，插入图片就so easy啦只需在[]前加上!就可以操作如下：1![](https://i.imgflip.com/19dwu7.jpg)
+效果如下：
+加粗/斜体操作如下：12*这里所说的话会斜体***这里所说的话会加粗**
+效果如下：这里所说的话会斜体这里所说的话会加粗
+分割线分割线可以用不止一种方法来达到效果，三个以上的*号，-号或_号都可以，这里就选几个为例来讲一讲操作如下：12345**** * ******---_ _ _
+删除线操作如下：1~~把我删除吧~~
+效果如下：把我删除吧
+下划线下划线暂时没有直接的markdown方法，但可以通过行内HTML和CSS来解决这方法好处多多，各种样式及大小，例如是要黑色还是红色，实线还是虚线，都可以自己通过CSS调具体如下：1<span style='border-bottom: 2px solid black;'>走过路过，加个下划线吧大哥大姐</span>
+效果如下：走过路过，加个下划线吧
+就先介绍到这里，还有些常用的功能，像是表格啊之类没提到，小伙伴们如有需要就自行搜索吧w
+</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#undefined"><span class="toc-number">0.0.0.0.1.</span> <span class="toc-text">，越往下字越小，重要性越次之：123456# 老大## 老二### 老三#### 老四##### 老五###### 老六
+效果如下：
+老大老二老三老四老五老六列表既然提到要使文章更加有逻辑，列表自然不可少。列表又分有序与无序两种，分别对应HTML中的, 顾名思义，有序列表前带数字编号，而无序列表前大多是小圆点。操作如下：无序（以下的*号也可替换成+或-）：123* cats* dogs* rabbits
+效果如下：
+
+cats
+dogs
+rabbits
+
+有序：1231. 土豆2. 番茄3. 茄子
+效果如下：
+
+土豆
+番茄
+茄子
+
+引用对应HTML中的操作如下：1234> 红红火火恍恍惚惚> 嘻嘻哈哈呵呵> 银铃般的笑声
+也可以简单点写成：1234> 红红火火恍恍惚惚嘻嘻哈哈呵呵> 银铃般的笑声
+效果如下：
+
+红红火火恍恍惚惚嘻嘻哈哈呵呵
+银铃般的笑声
+
+代码引用如果需要引用代码，只需用3个`号将代码上下包起来即可：如需要相关代码高亮，只需在第一行3个`号后面加上你所用的语言名称，如JavaScript（注：在不影响）
+效果如下：123var add = function(a, b) {  return a + b}
+插入链接我们用人见人爱的百度来举例：[]里填写想显示出的文字，()里填链接操作如下：1[百度](https://www.baidu.com/)
+效果如下：百度
+插入图片学会了插入链接，插入图片就so easy啦只需在[]前加上!就可以操作如下：1![](https://i.imgflip.com/19dwu7.jpg)
+效果如下：
+加粗/斜体操作如下：12*这里所说的话会斜体***这里所说的话会加粗**
+效果如下：这里所说的话会斜体这里所说的话会加粗
+分割线分割线可以用不止一种方法来达到效果，三个以上的*号，-号或_号都可以，这里就选几个为例来讲一讲操作如下：12345**** * ******---_ _ _
+删除线操作如下：1~~把我删除吧~~
+效果如下：把我删除吧
+下划线下划线暂时没有直接的markdown方法，但可以通过行内HTML和CSS来解决这方法好处多多，各种样式及大小，例如是要黑色还是红色，实线还是虚线，都可以自己通过CSS调具体如下：1<span style='border-bottom: 2px solid black;'>走过路过，加个下划线吧大哥大姐</span>
+效果如下：走过路过，加个下划线吧
+就先介绍到这里，还有些常用的功能，像是表格啊之类没提到，小伙伴们如有需要就自行搜索吧w
+</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#老大"><span class="toc-number"></span> <span class="toc-text">老大</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#老二"><span class="toc-number">1.</span> <span class="toc-text">老二</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#老三"><span class="toc-number">1.1.</span> <span class="toc-text">老三</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#老四"><span class="toc-number">1.1.1.</span> <span class="toc-text">老四</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#老五"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">老五</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#老六"><span class="toc-number">1.1.1.1.1.</span> <span class="toc-text">老六</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#列表"><span class="toc-number">2.</span> <span class="toc-text">列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#引用"><span class="toc-number">3.</span> <span class="toc-text">引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码引用"><span class="toc-number">4.</span> <span class="toc-text">代码引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#插入链接"><span class="toc-number">5.</span> <span class="toc-text">插入链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#插入图片"><span class="toc-number">6.</span> <span class="toc-text">插入图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#加粗-斜体"><span class="toc-number">7.</span> <span class="toc-text">加粗/斜体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分割线"><span class="toc-number">8.</span> <span class="toc-text">分割线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除线"><span class="toc-number">9.</span> <span class="toc-text">删除线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#下划线"><span class="toc-number">10.</span> <span class="toc-text">下划线</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -122,13 +199,56 @@
 
 
       
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/markdown/">markdown</a>
+    </div>
+
 
     </div>
   </header>
   
 
   <div class="content" itemprop="articleBody">
-    
+    <p>为什么选择markdown？<br>这个问题随手百度或知乎就可得到一大堆相关解答，也就不再赘述。<br>下面讲讲最常用的几个markdown语法：</p>
+<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>对熟悉HTML的人来讲，各级标题的使用必然不陌生。即使不熟悉也没关系，这就和写作时分小标题来使文章更有条理是一个道理。<br>操作很简单，在标题前加 # 即可。分别对应HTML中的</p><h1>到<h6>，越往下字越小，重要性越次之：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># 老大</div><div class="line">## 老二</div><div class="line">### 老三</div><div class="line">#### 老四</div><div class="line">##### 老五</div><div class="line">###### 老六</div></pre></td></tr></table></figure><p></p>
+<p>效果如下：</p>
+<h1 id="老大"><a href="#老大" class="headerlink" title="老大"></a>老大</h1><h2 id="老二"><a href="#老二" class="headerlink" title="老二"></a>老二</h2><h3 id="老三"><a href="#老三" class="headerlink" title="老三"></a>老三</h3><h4 id="老四"><a href="#老四" class="headerlink" title="老四"></a>老四</h4><h5 id="老五"><a href="#老五" class="headerlink" title="老五"></a>老五</h5><h6 id="老六"><a href="#老六" class="headerlink" title="老六"></a>老六</h6><h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>既然提到要使文章更加有逻辑，列表自然不可少。<br>列表又分有序与无序两种，分别对应HTML中的<ol>, <ul><br>顾名思义，有序列表前带数字编号，而无序列表前大多是小圆点。<br>操作如下：<br>无序（以下的*号也可替换成+或-）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">* cats</div><div class="line">* dogs</div><div class="line">* rabbits</div></pre></td></tr></table></figure></ul></ol></p>
+<p>效果如下：</p>
+<ul>
+<li>cats</li>
+<li>dogs</li>
+<li>rabbits</li>
+</ul>
+<p>有序：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1. 土豆</div><div class="line">2. 番茄</div><div class="line">3. 茄子</div></pre></td></tr></table></figure></p>
+<p>效果如下：</p>
+<ol>
+<li>土豆</li>
+<li>番茄</li>
+<li>茄子</li>
+</ol>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>对应HTML中的<blockquote><br>操作如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&gt; 红红火火恍恍惚惚</div><div class="line">&gt; 嘻嘻哈哈呵呵</div><div class="line"></div><div class="line">&gt; 银铃般的笑声</div></pre></td></tr></table></figure></blockquote></p>
+<p>也可以简单点写成：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&gt; 红红火火恍恍惚惚</div><div class="line">嘻嘻哈哈呵呵</div><div class="line"></div><div class="line">&gt; 银铃般的笑声</div></pre></td></tr></table></figure></p>
+<p>效果如下：</p>
+<blockquote>
+<p>红红火火恍恍惚惚<br>嘻嘻哈哈呵呵</p>
+<p>银铃般的笑声</p>
+</blockquote>
+<h2 id="代码引用"><a href="#代码引用" class="headerlink" title="代码引用"></a>代码引用</h2><p>如果需要引用代码，只需用3个`号将代码上下包起来即可：<br>如需要相关代码高亮，只需在第一行3个`号后面加上你所用的语言名称，如JavaScript<br><em>（注：在不影响）</em></p>
+<p>效果如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> add = <span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> a + b</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="插入链接"><a href="#插入链接" class="headerlink" title="插入链接"></a>插入链接</h2><p>我们用人见人爱的百度来举例：<br>[]里填写想显示出的文字，()里填链接<br>操作如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[百度](https://www.baidu.com/)</div></pre></td></tr></table></figure></p>
+<p>效果如下：<br><a href="https://www.baidu.com/" target="_blank" rel="external">百度</a></p>
+<h2 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h2><p>学会了插入链接，插入图片就so easy啦<br>只需在[]前加上!就可以<br>操作如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![](https://i.imgflip.com/19dwu7.jpg)</div></pre></td></tr></table></figure></p>
+<p>效果如下：<br><img src="https://i.imgflip.com/19dwu7.jpg" alt=""></p>
+<h2 id="加粗-斜体"><a href="#加粗-斜体" class="headerlink" title="加粗/斜体"></a>加粗/斜体</h2><p>操作如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">*这里所说的话会斜体*</div><div class="line">**这里所说的话会加粗**</div></pre></td></tr></table></figure></p>
+<p>效果如下：<br><em>这里所说的话会斜体</em><br><strong>这里所说的话会加粗</strong></p>
+<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><p>分割线可以用不止一种方法来达到效果，三个以上的*号，-号或_号都可以，这里就选几个为例来讲一讲<br>操作如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">***</div><div class="line">* * *</div><div class="line">*****</div><div class="line">---</div><div class="line">_ _ _</div></pre></td></tr></table></figure></p>
+<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><p>操作如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">~~把我删除吧~~</div></pre></td></tr></table></figure></p>
+<p>效果如下：<br><del>把我删除吧</del></p>
+<h2 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h2><p>下划线暂时没有直接的markdown方法，但可以通过行内HTML和CSS来解决<br>这方法好处多多，各种样式及大小，例如是要黑色还是红色，实线还是虚线，都可以自己通过CSS调<br>具体如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;span style=&apos;border-bottom: 2px solid black;&apos;&gt;走过路过，加个下划线吧大哥大姐&lt;/span&gt;</div></pre></td></tr></table></figure></p>
+<p>效果如下：<br><span style="border-bottom: 2px solid black;">走过路过，加个下划线吧</span></p>
+<p>就先介绍到这里，还有些常用的功能，像是表格啊之类没提到，小伙伴们如有需要就自行搜索吧w</p>
+</h6></h1>
   </div>
 </article>
 
@@ -160,7 +280,81 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#标题"><span class="toc-number">1.</span> <span class="toc-text">标题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number"></span> <span class="toc-text">到，越往下字越小，重要性越次之：123456# 老大## 老二### 老三#### 老四##### 老五###### 老六
+效果如下：
+老大老二老三老四老五老六列表既然提到要使文章更加有逻辑，列表自然不可少。列表又分有序与无序两种，分别对应HTML中的, 顾名思义，有序列表前带数字编号，而无序列表前大多是小圆点。操作如下：无序（以下的*号也可替换成+或-）：123* cats* dogs* rabbits
+效果如下：
+
+cats
+dogs
+rabbits
+
+有序：1231. 土豆2. 番茄3. 茄子
+效果如下：
+
+土豆
+番茄
+茄子
+
+引用对应HTML中的操作如下：1234> 红红火火恍恍惚惚> 嘻嘻哈哈呵呵> 银铃般的笑声
+也可以简单点写成：1234> 红红火火恍恍惚惚嘻嘻哈哈呵呵> 银铃般的笑声
+效果如下：
+
+红红火火恍恍惚惚嘻嘻哈哈呵呵
+银铃般的笑声
+
+代码引用如果需要引用代码，只需用3个`号将代码上下包起来即可：如需要相关代码高亮，只需在第一行3个`号后面加上你所用的语言名称，如JavaScript（注：在不影响）
+效果如下：123var add = function(a, b) {  return a + b}
+插入链接我们用人见人爱的百度来举例：[]里填写想显示出的文字，()里填链接操作如下：1[百度](https://www.baidu.com/)
+效果如下：百度
+插入图片学会了插入链接，插入图片就so easy啦只需在[]前加上!就可以操作如下：1![](https://i.imgflip.com/19dwu7.jpg)
+效果如下：
+加粗/斜体操作如下：12*这里所说的话会斜体***这里所说的话会加粗**
+效果如下：这里所说的话会斜体这里所说的话会加粗
+分割线分割线可以用不止一种方法来达到效果，三个以上的*号，-号或_号都可以，这里就选几个为例来讲一讲操作如下：12345**** * ******---_ _ _
+删除线操作如下：1~~把我删除吧~~
+效果如下：把我删除吧
+下划线下划线暂时没有直接的markdown方法，但可以通过行内HTML和CSS来解决这方法好处多多，各种样式及大小，例如是要黑色还是红色，实线还是虚线，都可以自己通过CSS调具体如下：1<span style='border-bottom: 2px solid black;'>走过路过，加个下划线吧大哥大姐</span>
+效果如下：走过路过，加个下划线吧
+就先介绍到这里，还有些常用的功能，像是表格啊之类没提到，小伙伴们如有需要就自行搜索吧w
+</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#undefined"><span class="toc-number">0.0.0.0.1.</span> <span class="toc-text">，越往下字越小，重要性越次之：123456# 老大## 老二### 老三#### 老四##### 老五###### 老六
+效果如下：
+老大老二老三老四老五老六列表既然提到要使文章更加有逻辑，列表自然不可少。列表又分有序与无序两种，分别对应HTML中的, 顾名思义，有序列表前带数字编号，而无序列表前大多是小圆点。操作如下：无序（以下的*号也可替换成+或-）：123* cats* dogs* rabbits
+效果如下：
+
+cats
+dogs
+rabbits
+
+有序：1231. 土豆2. 番茄3. 茄子
+效果如下：
+
+土豆
+番茄
+茄子
+
+引用对应HTML中的操作如下：1234> 红红火火恍恍惚惚> 嘻嘻哈哈呵呵> 银铃般的笑声
+也可以简单点写成：1234> 红红火火恍恍惚惚嘻嘻哈哈呵呵> 银铃般的笑声
+效果如下：
+
+红红火火恍恍惚惚嘻嘻哈哈呵呵
+银铃般的笑声
+
+代码引用如果需要引用代码，只需用3个`号将代码上下包起来即可：如需要相关代码高亮，只需在第一行3个`号后面加上你所用的语言名称，如JavaScript（注：在不影响）
+效果如下：123var add = function(a, b) {  return a + b}
+插入链接我们用人见人爱的百度来举例：[]里填写想显示出的文字，()里填链接操作如下：1[百度](https://www.baidu.com/)
+效果如下：百度
+插入图片学会了插入链接，插入图片就so easy啦只需在[]前加上!就可以操作如下：1![](https://i.imgflip.com/19dwu7.jpg)
+效果如下：
+加粗/斜体操作如下：12*这里所说的话会斜体***这里所说的话会加粗**
+效果如下：这里所说的话会斜体这里所说的话会加粗
+分割线分割线可以用不止一种方法来达到效果，三个以上的*号，-号或_号都可以，这里就选几个为例来讲一讲操作如下：12345**** * ******---_ _ _
+删除线操作如下：1~~把我删除吧~~
+效果如下：把我删除吧
+下划线下划线暂时没有直接的markdown方法，但可以通过行内HTML和CSS来解决这方法好处多多，各种样式及大小，例如是要黑色还是红色，实线还是虚线，都可以自己通过CSS调具体如下：1<span style='border-bottom: 2px solid black;'>走过路过，加个下划线吧大哥大姐</span>
+效果如下：走过路过，加个下划线吧
+就先介绍到这里，还有些常用的功能，像是表格啊之类没提到，小伙伴们如有需要就自行搜索吧w
+</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#老大"><span class="toc-number"></span> <span class="toc-text">老大</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#老二"><span class="toc-number">1.</span> <span class="toc-text">老二</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#老三"><span class="toc-number">1.1.</span> <span class="toc-text">老三</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#老四"><span class="toc-number">1.1.1.</span> <span class="toc-text">老四</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#老五"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">老五</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#老六"><span class="toc-number">1.1.1.1.1.</span> <span class="toc-text">老六</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#列表"><span class="toc-number">2.</span> <span class="toc-text">列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#引用"><span class="toc-number">3.</span> <span class="toc-text">引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码引用"><span class="toc-number">4.</span> <span class="toc-text">代码引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#插入链接"><span class="toc-number">5.</span> <span class="toc-text">插入链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#插入图片"><span class="toc-number">6.</span> <span class="toc-text">插入图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#加粗-斜体"><span class="toc-number">7.</span> <span class="toc-text">加粗/斜体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分割线"><span class="toc-number">8.</span> <span class="toc-text">分割线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除线"><span class="toc-number">9.</span> <span class="toc-text">删除线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#下划线"><span class="toc-number">10.</span> <span class="toc-text">下划线</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">

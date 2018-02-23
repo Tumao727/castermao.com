@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="很久前就看过Head First HTML with CSS &amp;amp; XHTML，不过05版那时还是HTML4.01的天下，许多知识点现在看来有些过时，于是趁着春节假期，迅速把12版粗略过了一遍。以下是我阅读过程中记录的一些重点，算是读书笔记：  超链接文件跳转，向下索引，直接’文件名/example.html’，向上则’../example’。同时，无论何种操作系统，每上一层就多打一次..，">
+<meta name="keywords" content="note">
+<meta property="og:type" content="article">
+<meta property="og:title" content="5分钟看完&lt;Head First HTML与CSS&gt;">
+<meta property="og:url" content="http://castermao.com/2018/02/23/HTML与CSS/index.html">
+<meta property="og:site_name" content="FE炼金术研究所">
+<meta property="og:description" content="很久前就看过Head First HTML with CSS &amp;amp; XHTML，不过05版那时还是HTML4.01的天下，许多知识点现在看来有些过时，于是趁着春节假期，迅速把12版粗略过了一遍。以下是我阅读过程中记录的一些重点，算是读书笔记：  超链接文件跳转，向下索引，直接’文件名/example.html’，向上则’../example’。同时，无论何种操作系统，每上一层就多打一次..，">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.loli.net/2018/02/23/5a8f82e2df030.png">
+<meta property="og:updated_time" content="2018-02-23T04:01:52.991Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="5分钟看完&lt;Head First HTML与CSS&gt;">
+<meta name="twitter:description" content="很久前就看过Head First HTML with CSS &amp;amp; XHTML，不过05版那时还是HTML4.01的天下，许多知识点现在看来有些过时，于是趁着春节假期，迅速把12版粗略过了一遍。以下是我阅读过程中记录的一些重点，算是读书笔记：  超链接文件跳转，向下索引，直接’文件名/example.html’，向上则’../example’。同时，无论何种操作系统，每上一层就多打一次..，">
+<meta name="twitter:image" content="https://i.loli.net/2018/02/23/5a8f82e2df030.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/icon.png">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/android.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>5分钟看完&lt;Head First HTML与CSS&gt;</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://github.com/Tumao727">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2018/01/30/不可不知的CSS选择器/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://castermao.com/2018/02/23/HTML与CSS/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://castermao.com/2018/02/23/HTML与CSS/&text=5分钟看完&lt;Head First HTML与CSS&gt;"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://castermao.com/2018/02/23/HTML与CSS/&title=5分钟看完&lt;Head First HTML与CSS&gt;"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://castermao.com/2018/02/23/HTML与CSS/&is_video=false&description=5分钟看完&lt;Head First HTML与CSS&gt;"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=5分钟看完&lt;Head First HTML与CSS&gt;&body=Check out this article: http://castermao.com/2018/02/23/HTML与CSS/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://castermao.com/2018/02/23/HTML与CSS/&title=5分钟看完&lt;Head First HTML与CSS&gt;"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://castermao.com/2018/02/23/HTML与CSS/&title=5分钟看完&lt;Head First HTML与CSS&gt;"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://castermao.com/2018/02/23/HTML与CSS/&title=5分钟看完&lt;Head First HTML与CSS&gt;"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://castermao.com/2018/02/23/HTML与CSS/&title=5分钟看完&lt;Head First HTML与CSS&gt;"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://castermao.com/2018/02/23/HTML与CSS/&name=5分钟看完&lt;Head First HTML与CSS&gt;&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        5分钟看完&lt;Head First HTML与CSS&gt;
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">FE炼金术研究所</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-02-23T02:28:38.000Z" itemprop="datePublished">2018-02-23</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/note/">note</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p><img src="https://i.loli.net/2018/02/23/5a8f82e2df030.png" alt=""><br>很久前就看过<a href="https://book.douban.com/subject/1472137/" target="_blank" rel="external">Head First HTML with CSS &amp; XHTML</a>，不过05版那时还是HTML4.01的天下，许多知识点现在看来有些过时，于是趁着春节假期，迅速把12版粗略过了一遍。以下是我阅读过程中记录的一些重点，算是读书笔记：</p>
+<ol>
+<li><p>超链接文件跳转，向下索引，直接’文件名/example.html’，向上则’../example’。同时，无论何种操作系统，每上一层就多打一次<code>..</code>，并用<code>/</code>隔开。</p>
+</li>
+<li><p>可以直接链接带id的元素，做到本页面内跳转。具体应用示例：<strong>回到顶部功能</strong>，即给网页上方赋予一个id，并在下方插入<code>&lt;a&gt;</code>，链接到上方的id。</p>
+</li>
+<li><p>一个经验：浏览器宽度一般设置为800-1280像素间，同时logo宽度在100-200像素间。</p>
+</li>
+<li><p>指定字体推荐方法：</p>
+<ul>
+<li>选择一个关键字（推荐small/medium），指定为body中字体大小。</li>
+<li>使用em或百分数，相对于body字体大小指定其他元素字体大小。</li>
+</ul>
+</li>
+<li><p>颜色不管十六进制还是rgb，都是红、绿、蓝的顺序。<br>其中，16进制转换rgb的计算方法：<br>先列出所有可能涉及到的数：0 1 2 3 4 5 6 7 8 9 A B C D E F<br>它们分别代表0-16，举个栗子，即A为10，B为11。<br>以CD为例，它分别代表12与13，我们将12*16得出192，再加上13，即205</p>
+</li>
+<li><p>若使用删除线装饰，别用text-decoration的line-through属性，最好选择HTML提供的<del>标签。</del></p>
+</li>
+<li><p>利用媒体查询，即media添加断点，进行响应式web设计。</p>
+</li>
+<li><p>border简写的顺序可按自身喜好进行（背景设置与其同理）。</p>
+</li>
+<li><p>CSS选择器分值计算：<br>0 0 0<br>这个三位数，百位：<strong>每包含一个id加1分</strong>，十位：<strong>每包含一个class或伪类加1分</strong>，个位：<strong>每包含一个元素名加1分</strong></p>
+</li>
+<li><p>内联（inline）元素的外边距不会折叠，而是会相加。而块元素（block）会折叠。同时，只要两个垂直外边距碰到一起就会折叠，即使是一个元素嵌套在另一个元素中也不例外。当然，只要有边框，就不能避免。</p>
+</li>
+<li><p>使用float时，段落会从正常的流中删除，所以其他block元素会当它不存在般填充，可inline元素会围绕它。</p>
+</li>
+<li><p>与float不同，使用绝对定位（positon：absolute）时，连inline元素都会忽略它。</p>
+</li>
+<li><p>使用clear可消除float内容。</p>
+</li>
+<li><p>可利用CSS进行table布局，分别将display改为table, table-row, table-cell即可。</p>
+</li>
+<li><p>HTML插入表格，想要让单元格跨多行，可使用rowspan属性来指定，如rowspan = ‘2’。跨多列是colspan。</p>
+</li>
+<li><p>去除或修改list前的点，可修改list-style-type属性（如disc, circle, square等），也可自行栓剂使用定制版，即使用list-style-image，方法同上。</p>
+</li>
+</ol>
+<p>这篇文章也算是标题党了一回，毕竟记录的都是我个人觉得有启发的部分。<br>最近总觉得CSS的学习不得章法，记过就忘。假期不知不觉也结束了，有些焦虑。希望接下来能有所进步吧。</p>
+
+  </div>
+</article>
+
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+    </div>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://github.com/Tumao727">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://castermao.com/2018/02/23/HTML与CSS/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://castermao.com/2018/02/23/HTML与CSS/&text=5分钟看完&lt;Head First HTML与CSS&gt;"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://castermao.com/2018/02/23/HTML与CSS/&title=5分钟看完&lt;Head First HTML与CSS&gt;"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://castermao.com/2018/02/23/HTML与CSS/&is_video=false&description=5分钟看完&lt;Head First HTML与CSS&gt;"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=5分钟看完&lt;Head First HTML与CSS&gt;&body=Check out this article: http://castermao.com/2018/02/23/HTML与CSS/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://castermao.com/2018/02/23/HTML与CSS/&title=5分钟看完&lt;Head First HTML与CSS&gt;"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://castermao.com/2018/02/23/HTML与CSS/&title=5分钟看完&lt;Head First HTML与CSS&gt;"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://castermao.com/2018/02/23/HTML与CSS/&title=5分钟看完&lt;Head First HTML与CSS&gt;"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://castermao.com/2018/02/23/HTML与CSS/&title=5分钟看完&lt;Head First HTML与CSS&gt;"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://castermao.com/2018/02/23/HTML与CSS/&name=5分钟看完&lt;Head First HTML与CSS&gt;&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Tumao
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://github.com/Tumao727">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-86660611-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'tumao727';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+

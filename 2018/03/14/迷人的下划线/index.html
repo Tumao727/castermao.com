@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="上学或是平时读书，在遇到重点语句时，常常想要做些标记来加深印象，也方便以后查找。下划线 无疑是大家最好的选择。那如何利用HTML与CSS给文字添加下划线呢？最广为人知的方法是以下三种：  使用&amp;lt;u&amp;gt; 将CSS中text-decoration属性设置为underline 利用border-bottom下面展开来讲讲。首先，第一种已经过时了，建议大家不要使用。偏重外观呈现的方面，我们本就该">
+<meta name="keywords" content="CSS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="迷人的下划线">
+<meta property="og:url" content="http://castermao.com/2018/03/14/迷人的下划线/index.html">
+<meta property="og:site_name" content="FE炼金术研究所">
+<meta property="og:description" content="上学或是平时读书，在遇到重点语句时，常常想要做些标记来加深印象，也方便以后查找。下划线 无疑是大家最好的选择。那如何利用HTML与CSS给文字添加下划线呢？最广为人知的方法是以下三种：  使用&amp;lt;u&amp;gt; 将CSS中text-decoration属性设置为underline 利用border-bottom下面展开来讲讲。首先，第一种已经过时了，建议大家不要使用。偏重外观呈现的方面，我们本就该">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.loli.net/2018/03/15/5aa9d2c8b9c05.png">
+<meta property="og:image" content="https://i.loli.net/2018/03/15/5aa9dd3691bde.png">
+<meta property="og:image" content="https://i.loli.net/2018/03/15/5aa9e5774fcea.png">
+<meta property="og:updated_time" content="2018-03-15T03:19:22.308Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="迷人的下划线">
+<meta name="twitter:description" content="上学或是平时读书，在遇到重点语句时，常常想要做些标记来加深印象，也方便以后查找。下划线 无疑是大家最好的选择。那如何利用HTML与CSS给文字添加下划线呢？最广为人知的方法是以下三种：  使用&amp;lt;u&amp;gt; 将CSS中text-decoration属性设置为underline 利用border-bottom下面展开来讲讲。首先，第一种已经过时了，建议大家不要使用。偏重外观呈现的方面，我们本就该">
+<meta name="twitter:image" content="https://i.loli.net/2018/03/15/5aa9d2c8b9c05.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/icon.png">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/android.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>迷人的下划线</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://github.com/Tumao727">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2018/02/23/5分钟看完HeadFirst/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://castermao.com/2018/03/14/迷人的下划线/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://castermao.com/2018/03/14/迷人的下划线/&text=迷人的下划线"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://castermao.com/2018/03/14/迷人的下划线/&title=迷人的下划线"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://castermao.com/2018/03/14/迷人的下划线/&is_video=false&description=迷人的下划线"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=迷人的下划线&body=Check out this article: http://castermao.com/2018/03/14/迷人的下划线/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://castermao.com/2018/03/14/迷人的下划线/&title=迷人的下划线"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://castermao.com/2018/03/14/迷人的下划线/&title=迷人的下划线"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://castermao.com/2018/03/14/迷人的下划线/&title=迷人的下划线"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://castermao.com/2018/03/14/迷人的下划线/&title=迷人的下划线"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://castermao.com/2018/03/14/迷人的下划线/&name=迷人的下划线&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        迷人的下划线
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">FE炼金术研究所</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-03-14T04:29:23.000Z" itemprop="datePublished">2018-03-14</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/CSS/">CSS</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p><img src="https://i.loli.net/2018/03/15/5aa9d2c8b9c05.png" alt=""><br>上学或是平时读书，在遇到重点语句时，常常想要做些标记来加深印象，也方便以后查找。<strong>下划线</strong> 无疑是大家最好的选择。<br>那如何利用HTML与CSS给文字添加下划线呢？<br>最广为人知的方法是以下三种：</p>
+<ol>
+<li>使用<code>&lt;u&gt;</code></li>
+<li>将CSS中<code>text-decoration</code>属性设置为underline</li>
+<li>利用<code>border-bottom</code><br>下面展开来讲讲。<br>首先，第一种已经过时了，建议大家不要使用。偏重外观呈现的方面，我们本就该用CSS，而非HTML来解决。更别提HTML5规定说<code>&lt;u&gt;</code>的正确打开方式是用来标记 <em>the Unarticulated Annotation</em> ，即一些拼错的字词。配合CSS使用，可以获得word中字词检查发现错误时的效果：<br><strong>HTML:</strong><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">    王小明没写作业，因此被妈妈<span class="tag">&lt;<span class="name">u</span>&gt;</span>打暴<span class="tag">&lt;/<span class="name">u</span>&gt;</span>了一顿。</div><div class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><strong>CSS:</strong><br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">u</span> &#123;</div><div class="line">    <span class="attribute">text-decoration</span>: red wavy underline;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>实图效果：</strong><br><img src="https://i.loli.net/2018/03/15/5aa9dd3691bde.png" alt=""></p>
+<p>后面两种倒是没多大差别，<code>text-decoration</code>与<code>border</code>都自带<code>color</code>与<code>style</code>属性，想要不同颜色与风格也是轻而易举。但如果你还想要设置 <strong>间距</strong> 与 <strong>厚度</strong>，那方法2就无能为力，只能依赖方法3了。<br><code>border</code>本身可以设置<code>width</code>，还可以通过添加<code>&lt;span&gt;</code>元素设置<code>padding-bottom</code>的方法来添加间距。<br>两者具体操作对比如下：</p>
+<p>###<code>border</code>法：<br><strong>HTML:</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">    王小明居然<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">'solution1'</span>&gt;</span>又没写作业！<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p><strong>CSS:</strong><br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.solution1</span> &#123;</div><div class="line">    <span class="attribute">border-bottom</span>: <span class="number">2px</span> solid black;</div><div class="line">    <span class="attribute">padding-bottom</span>: <span class="number">8px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>###<code>text-decoration</code>法：<br><strong>HTML:</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">    王小明居然<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">'solution2'</span>&gt;</span>又没写作业！<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p><strong>CSS:</strong><br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.solution2</span> &#123;</div><div class="line">    <span class="attribute">text-decoration</span>: red underline;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>对比实图效果如下：</strong><br><img src="https://i.loli.net/2018/03/15/5aa9e5774fcea.png" alt=""></p>
+<p>综上，border法目前看来是最灵活方便的下划线解决方案。但萝卜青菜各有所爱，实际操作时可能还会有一些更独特巧妙的方法，大家挑选自己最熟悉顺手的即可ww</p>
+
+  </div>
+</article>
+
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+    </div>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://github.com/Tumao727">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://castermao.com/2018/03/14/迷人的下划线/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://castermao.com/2018/03/14/迷人的下划线/&text=迷人的下划线"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://castermao.com/2018/03/14/迷人的下划线/&title=迷人的下划线"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://castermao.com/2018/03/14/迷人的下划线/&is_video=false&description=迷人的下划线"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=迷人的下划线&body=Check out this article: http://castermao.com/2018/03/14/迷人的下划线/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://castermao.com/2018/03/14/迷人的下划线/&title=迷人的下划线"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://castermao.com/2018/03/14/迷人的下划线/&title=迷人的下划线"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://castermao.com/2018/03/14/迷人的下划线/&title=迷人的下划线"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://castermao.com/2018/03/14/迷人的下划线/&title=迷人的下划线"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://castermao.com/2018/03/14/迷人的下划线/&name=迷人的下划线&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Tumao
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://github.com/Tumao727">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-86660611-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'tumao727';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+

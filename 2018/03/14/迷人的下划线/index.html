@@ -6,21 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="上学或是平时读书，在遇到重点语句时，常常想要做些标记来加深印象，也方便以后查找。下划线 无疑是大家最好的选择。那如何利用HTML与CSS给文字添加下划线呢？最广为人知的方法是以下三种：  使用&amp;lt;u&amp;gt; 将CSS中text-decoration属性设置为underline 利用border-bottom下面展开来讲讲。首先，第一种已经过时了，建议大家不要使用。偏重外观呈现的方面，我们本就该">
+    <meta name="description" content="上学或是平时读书，在遇到重点语句时，常常想要做些标记来加深印象，也方便以后查找。下划线 无疑是大家最好的选择。那如何利用HTML与CSS给文字添加下划线呢？最广为人知的方法是以下三种：  使用&amp;lt;u&amp;gt; 将CSS中text-decoration属性设置为underline 利用border-bottom  下面展开来讲讲。首先，第一种已经过时了，建议大家不要使用。偏重外观呈现的方面，我们本">
 <meta name="keywords" content="CSS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="迷人的下划线">
 <meta property="og:url" content="http://castermao.com/2018/03/14/迷人的下划线/index.html">
 <meta property="og:site_name" content="FE炼金术研究所">
-<meta property="og:description" content="上学或是平时读书，在遇到重点语句时，常常想要做些标记来加深印象，也方便以后查找。下划线 无疑是大家最好的选择。那如何利用HTML与CSS给文字添加下划线呢？最广为人知的方法是以下三种：  使用&amp;lt;u&amp;gt; 将CSS中text-decoration属性设置为underline 利用border-bottom下面展开来讲讲。首先，第一种已经过时了，建议大家不要使用。偏重外观呈现的方面，我们本就该">
+<meta property="og:description" content="上学或是平时读书，在遇到重点语句时，常常想要做些标记来加深印象，也方便以后查找。下划线 无疑是大家最好的选择。那如何利用HTML与CSS给文字添加下划线呢？最广为人知的方法是以下三种：  使用&amp;lt;u&amp;gt; 将CSS中text-decoration属性设置为underline 利用border-bottom  下面展开来讲讲。首先，第一种已经过时了，建议大家不要使用。偏重外观呈现的方面，我们本">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.loli.net/2018/03/15/5aa9d2c8b9c05.png">
 <meta property="og:image" content="https://i.loli.net/2018/03/15/5aa9dd3691bde.png">
 <meta property="og:image" content="https://i.loli.net/2018/03/15/5aa9e5774fcea.png">
-<meta property="og:updated_time" content="2018-03-15T03:19:22.308Z">
+<meta property="og:updated_time" content="2018-03-15T03:22:42.481Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="迷人的下划线">
-<meta name="twitter:description" content="上学或是平时读书，在遇到重点语句时，常常想要做些标记来加深印象，也方便以后查找。下划线 无疑是大家最好的选择。那如何利用HTML与CSS给文字添加下划线呢？最广为人知的方法是以下三种：  使用&amp;lt;u&amp;gt; 将CSS中text-decoration属性设置为underline 利用border-bottom下面展开来讲讲。首先，第一种已经过时了，建议大家不要使用。偏重外观呈现的方面，我们本就该">
+<meta name="twitter:description" content="上学或是平时读书，在遇到重点语句时，常常想要做些标记来加深印象，也方便以后查找。下划线 无疑是大家最好的选择。那如何利用HTML与CSS给文字添加下划线呢？最广为人知的方法是以下三种：  使用&amp;lt;u&amp;gt; 将CSS中text-decoration属性设置为underline 利用border-bottom  下面展开来讲讲。首先，第一种已经过时了，建议大家不要使用。偏重外观呈现的方面，我们本">
 <meta name="twitter:image" content="https://i.loli.net/2018/03/15/5aa9d2c8b9c05.png">
     
     
@@ -144,9 +144,9 @@
 <ol>
 <li>使用<code>&lt;u&gt;</code></li>
 <li>将CSS中<code>text-decoration</code>属性设置为underline</li>
-<li>利用<code>border-bottom</code><br>下面展开来讲讲。<br>首先，第一种已经过时了，建议大家不要使用。偏重外观呈现的方面，我们本就该用CSS，而非HTML来解决。更别提HTML5规定说<code>&lt;u&gt;</code>的正确打开方式是用来标记 <em>the Unarticulated Annotation</em> ，即一些拼错的字词。配合CSS使用，可以获得word中字词检查发现错误时的效果：<br><strong>HTML:</strong><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">    王小明没写作业，因此被妈妈<span class="tag">&lt;<span class="name">u</span>&gt;</span>打暴<span class="tag">&lt;/<span class="name">u</span>&gt;</span>了一顿。</div><div class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
+<li>利用<code>border-bottom</code></li>
 </ol>
+<p>下面展开来讲讲。<br>首先，第一种已经过时了，建议大家不要使用。偏重外观呈现的方面，我们本就该用CSS，而非HTML来解决。更别提HTML5规定说<code>&lt;u&gt;</code>的正确打开方式是用来标记 <em>the Unarticulated Annotation</em> ，即一些拼错的字词。配合CSS使用，可以获得word中字词检查发现错误时的效果：<br><strong>HTML:</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">    王小明没写作业，因此被妈妈<span class="tag">&lt;<span class="name">u</span>&gt;</span>打暴<span class="tag">&lt;/<span class="name">u</span>&gt;</span>了一顿。</div><div class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p><strong>CSS:</strong><br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">u</span> &#123;</div><div class="line">    <span class="attribute">text-decoration</span>: red wavy underline;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p><strong>实图效果：</strong><br><img src="https://i.loli.net/2018/03/15/5aa9dd3691bde.png" alt=""></p>
 <p>后面两种倒是没多大差别，<code>text-decoration</code>与<code>border</code>都自带<code>color</code>与<code>style</code>属性，想要不同颜色与风格也是轻而易举。但如果你还想要设置 <strong>间距</strong> 与 <strong>厚度</strong>，那方法2就无能为力，只能依赖方法3了。<br><code>border</code>本身可以设置<code>width</code>，还可以通过添加<code>&lt;span&gt;</code>元素设置<code>padding-bottom</code>的方法来添加间距。<br>两者具体操作对比如下：</p>

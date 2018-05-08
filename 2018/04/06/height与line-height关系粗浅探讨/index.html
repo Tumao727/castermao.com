@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="FE炼金术研究所">
 <meta property="og:description" content="作为一个正自学前端的萌新，常看别人的代码琢磨，发现有时候设置高度用的是height，有时是line-height，那两者究竟有什么区别呢？本着技术不决问谷歌的思想，迅速去搜了搜，发现了以下问答： font-size vs line-height vs actual height height vs line-height styling CSS 里的 height 属性与 line-height">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-06T13:37:58.210Z">
+<meta property="og:updated_time" content="2018-04-08T01:31:25.422Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="height与line-height关系粗浅记录">
 <meta name="twitter:description" content="作为一个正自学前端的萌新，常看别人的代码琢磨，发现有时候设置高度用的是height，有时是line-height，那两者究竟有什么区别呢？本着技术不决问谷歌的思想，迅速去搜了搜，发现了以下问答： font-size vs line-height vs actual height height vs line-height styling CSS 里的 height 属性与 line-height">
@@ -143,7 +143,7 @@
 <p>综合这几个回答，我的想法就是：</p>
 <ol>
 <li>首先从定义看，height只决定了<strong>其包含块元素的垂直高度</strong>。line-height则决定了<strong>其顶边界到底边界的距离，即文本行高</strong>。</li>
-<li>height在确认数值后，会自上而下填充内容。而line-height会在确定数值后，将多余高度平均分给上下部分。因此，<strong>布局时用line-height能帮助设置令人头特的垂直居中</strong>。</li>
+<li>height在确认数值后，会自上而下填充内容。而line-height会在确定数值后，将多余高度平均分给上下部分。因此，<strong>布局时用line-height能帮助设置行间距，以及令人头特的垂直居中</strong>。</li>
 <li>在未特别设置line-height或height的情况下，元素高度由font-size决定。</li>
 </ol>
 <p>暂且如此，等之后遇到新问题或有了新感悟再来更新w</p>
